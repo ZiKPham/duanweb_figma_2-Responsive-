@@ -1,5 +1,8 @@
 /* PC */
 @media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* TABLET & MOBILE */
@@ -40,18 +43,307 @@
     opacity: 1;
     visibility: visible;
   }
+
+  .menu-drawer {
+    padding: 60px;
+    position: fixed;
+    background: #10375c;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
+
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  .close__menu {
+    width: 30px;
+    color: #fff;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar__list {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .navbar__link:hover {
+    background-color: #00ffff37;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .hero__content {
+    order: 2;
+  }
+  .hero__media {
+    order: 1;
+  }
+  .hero__content {
+    width: 80%;
+    text-align: center;
+    margin: 22px auto;
+  }
+  .hero__row {
+    justify-content: center;
+  }
+
+  .service__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .service__img {
+    width: 100%;
+  }
+
+  .service__list {
+    text-align: center;
+  }
+
+  .service-item {
+    justify-content: center;
+    text-align: start;
+  }
+
+  .section-heading {
+    text-align: center;
+  }
+
+  .work__desc {
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+  .work__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .about-row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .about__media {
+    width: 100%;
+  }
+
+  .about__img--small {
+    display: none;
+  }
+
+  .about__img--big {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px auto;
+  }
+
+  .about-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  .team-item__thumb {
+    margin: 0 auto;
+  }
+
+  .install__img {
+    display: none;
+  }
+
+  .install__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .install__heading {
+    text-align: start;
+  }
+
+  .blog__inner {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .blog__list {
+    order: 1;
+    width: 65%;
+  }
+
+  .blog__content {
+    order: 2;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog__heading {
+    width: 90%;
+  }
+
+  .blog-item {
+    border: 1px solid #0000002e;
+    border-radius: 12px;
+  }
 }
 
 /* TABLET */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-hidden-tablet {
+    display: none;
+  }
+
+  .footer__top {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
+
+  .show-on-mobile {
+    display: none;
+  }
 }
 
 /* MOBILE */
 @media (max-width: 767.98px) {
-}
+  .header__action {
+    display: none;
+  }
 
-.hero,
-footer,
-main {
-  /* display: none; */
+  .menu-header__icon {
+    left: 10px;
+    top: 11px;
+    width: 40px;
+  }
+
+  .menu-drawer {
+    padding: 40px;
+    inset: 0 40% 0 0;
+  }
+
+  .navbar__item {
+    list-style: none;
+  }
+
+  .separate {
+    border-top: 1.5px solid #8c8b8b;
+    margin-top: 10px;
+  }
+
+  .hero {
+    gap: 10px;
+  }
+
+  .hero__img--small {
+    display: none;
+  }
+
+  .hero__img--large {
+    width: 100%;
+    height: 400px;
+  }
+
+  .hero__desc {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    min-width: 140px;
+  }
+
+  .hero__row {
+    margin-top: 30px;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .section-desc {
+    width: 95%;
+  }
+
+  .service__img {
+    height: auto;
+  }
+
+  .work {
+    padding: 50px 0;
+  }
+
+  .work .work-item {
+    padding: 15px;
+    border: 15px solid #eaf6ff;
+  }
+
+  .about {
+    margin-top: 20px;
+    padding: 40px 0;
+  }
+
+  .section-heading {
+    font-size: 3rem;
+  }
+
+  .section-desc {
+  }
+
+  .team__list {
+    grid-template-columns: 1fr;
+  }
+
+  .install__inner {
+    margin: 40px 0;
+    padding: 0 8px;
+  }
+
+  .install__content {
+    min-width: 250px;
+  }
+
+  .install__desc {
+    font-size: 1.3rem;
+  }
+
+  .blog__list {
+    justify-content: center;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .appointment__inner {
+    padding: 30px 5px;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .footer__copyright {
+    margin-top: 30px;
+  }
 }
